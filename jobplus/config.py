@@ -1,12 +1,12 @@
 class BaseConfig(object):
-	pass
+	SECRET_KEY = 'louplus 4-1'
 
 class DevelopmentConfig(BaseConfig):
 	DEBUG = True
 	SQLALCHEMY_DATABASE_URI = 'mysql+mysqldb://root@localhost:3306/simpledu?charset=utf8'
 
-class ProductionConfig(BaseConfig):
-	pass
+class ProductionConfig(DevelopmentConfig):
+	DEBUG = False
 
 class TestingConfig(BaseConfig):
 	pass
