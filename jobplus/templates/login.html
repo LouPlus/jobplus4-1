@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% from 'macros.html' import render_form %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+    <div style="width: 400px; margin: 0 auto">
+    <h2 style="text-align: center">Login</h2></br>
+        {{ render_form(form, url_for('front.login')) }}
+    </div>
+{% endblock %}
+
+{% block footer %}{% endblock %}
