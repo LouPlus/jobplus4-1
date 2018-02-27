@@ -1,19 +1,13 @@
 {% extends 'base.html' %}
 
+{% from 'macros.html' import render_form %}
+
 {% block title %}Login{% endblock %}
 
 {% block body %}
-    <h2>登录</h2></br>
-    <from>
-        <p>用户名 : <input type="text"></p>
-        <p>密  码 : <input type="password"></p>
-    </from>
-    <div>
-        <p>
-            <button type="submit">提交</button>
-            <button type="reset">重置</button>
-        </p>
-        <p><button type="button" href="?">注册</button> </p>
+    <div style="width: 400px; margin: 0 auto">
+    <h2 style="text-align: center">Login</h2></br>
+        {{ render_form(form, url_for('front.login')) }}
     </div>
 {% endblock %}
 
